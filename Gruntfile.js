@@ -11,12 +11,20 @@ module.exports = function (grunt) {
             options: {
               progressive: true
             },
-            files: [{
+            files: [
+              {
               expand: true,
               cwd: 'images',
               src: ['**/*.{png,jpg,gif}'],
               dest: 'build/images'
-            }]
+            },
+            {
+              expand: true,
+              cwd: 'icons',
+              src: ['**/*.{png,jpg,gif}'],
+              dest: 'build/icons'
+            },
+          ]
           }
       },
       // Remove unused CSS across multiple files
