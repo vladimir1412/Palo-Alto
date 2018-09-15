@@ -27,7 +27,7 @@ header {
                         text-decoration: none;
                         color: $navigation-link-color-quinary;
                         &:hover {
-                            color: $navigation-background-color-primary;
+                            color: $navigation-hover-color-primary;
                         }
                     }
                 }
@@ -37,7 +37,7 @@ header {
                         right: auto !important;
                     }
                     &:hover {
-                        color: $navigation-link-color-quinary;
+                        color: $navigation-hover-color-primary;
                         .dropdown__content {
                             position: absolute;
                             display: block;
@@ -125,6 +125,7 @@ header {
                             height: 140px;
                         }
                         &:hover {
+                            color: $navigation-hover-color-secondary;
                             .dropdown__content {
                                 display: flex;
                                 width: 140px;
@@ -137,7 +138,7 @@ header {
                                     &:hover {
                                         background-color: transparent;
                                         a {
-                                            color: $text-color-primary-ligtPurple;
+                                            color: $navigation-hover-color-secondary;
                                         }
                                     }
                                 }
