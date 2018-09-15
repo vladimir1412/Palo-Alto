@@ -29,15 +29,16 @@ module.exports = function (grunt) {
       },
       // Watches for changes
       watch: {
-        options: {livereload: true},
         sass: {
-          files: ['sass/*.scss'],
-          tasks: ['sass','cssmin']
+          files: ['**/*.scss'],
+          tasks: ['sass','cssmin'],
+          options: {livereload: true}
         },
 
         js: {
           files: ['js/*.js'],
-          tasks: 'js'
+          tasks: 'js',
+          options: {livereload: true}
         }
       },
       concat: {
