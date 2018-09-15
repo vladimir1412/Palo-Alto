@@ -37,6 +37,7 @@ header {
                         right: auto !important;
                     }
                     &:hover {
+                        color: $navigation-link-color-quinary;
                         .dropdown__content {
                             position: absolute;
                             display: block;
