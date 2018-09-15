@@ -1,0 +1,16 @@
+@import "./typography";
+@import "./colors";
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: calc(100% - 160px);
+    background-color: $background-color-secondary;
+}

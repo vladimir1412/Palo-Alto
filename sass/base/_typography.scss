@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Lato';
+    font-weight: 300;
+    font-style: normal;
+    src: url("/sass/fonts/Lato-Light.eot") format("eot"),
+	     url("/sass/fonts/Lato-Light.woff2") format("woff2"),
+	     url("/sass/fonts/Lato-Light.woff") format("woff"),
+         url("/sass/fonts/Lato-Light.ttf") format("truetype");
+        }
+
+body {
+    font: {
+        family: "Lato", sans-serif;
+        weight: 300;
+    }
+}

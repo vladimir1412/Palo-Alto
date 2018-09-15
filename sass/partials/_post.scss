@@ -1,0 +1,178 @@
+@import "../helpers/mixins";
+@import "../helpers/variables";
+
+main {
+    .wrapper {
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+    }
+    .post {
+        height: 100%;
+        background-color: $background-color-secondary;
+        padding: 90px 98px 110px 98px;
+        &__tag {
+            width: 94px;
+            height: 32px;
+            background-color: $background-color-quaternary;
+            color: $text-color-primary-light;
+            line-height: 32px;
+            font-size: 14px;
+            font-weight: bold;
+            font-family: $font-lato;
+            text-align: center;
+            float: right;
+            position: relative;
+            left: 110px;
+            bottom: 8px;
+        }
+        &__date {
+            font-size: 14px;
+            line-height: 50px;
+            font-family: $font-lato;
+            color: $text-post-date-color;
+            font-weight: bold;
+        }
+        &__title {
+            &--name {
+                font-size: 40px;
+                font-family: $font-lato;
+                line-height: 50px;
+                color: #000000;
+                font-weight: bold;
+            }
+            border-bottom: 2px solid $border-post-color;
+            margin-bottom: 40px;
+        }
+        &__content {
+            padding-right: 15px;
+            &--image {
+                float: left;
+                padding-right: 15px;
+                padding-bottom: 15px;
+            }
+            &--text {
+                font-size: 17px;
+                font-family: $font-lato;
+                line-height: 30px;
+                color: $text-color-primary;
+                font-weight: 400;
+                margin-top: 40px;
+                &--link {
+                    color: post-link-color;
+                    text-decoration: underline;
+                }
+                &--quote {
+                    height: auto;
+                    border-left: 4px solid $post-quote-border-color;
+                    padding-left: 23px;
+                    span {
+                        font-size: 20px;
+                        line-height: 30px;
+                        color: $text-color-primary-lightGray;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+        &__hashtags {
+            font-size: 15px;
+            font-family: $font-lato;
+            line-height: 50px;
+            color: $text-post-hashtags-color;
+            float: right;
+            font-weight: 400;
+            &--tag {
+                &:first-child {
+                    padding-right: 5px;
+                }
+            }
+        }
+    }
+    @include mQ(1440px, 1200px) {
+        .wrapper {
+            width: calc(100% - 460px);
+        }
+    }
+    @include mQ(768px, 321px) {
+        .wrapper {
+            width: calc(100% - 30px);
+        }
+        .post {
+            padding: 50px 50px 80px 50px;
+            &__title {
+                &--name {
+                    font-size: 32px;
+                    line-height: 42px;
+                }
+            }
+            &__date {
+                font-size: 18px;
+            }
+            &__tag {
+                height: 38px;
+                width: 111px;
+                position: relative;
+                left: 50px;
+                bottom: 50px;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 42px;
+            }
+            &__content {
+                padding: 0;
+                &--image {
+                    float: none;
+                    padding: 0;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    height: 380px;
+                    width: auto;
+                }
+            }
+            &__hashtags {
+                float: left;
+            }
+        }
+    }
+    @include mQ(320px) {
+        .wrapper {
+            width: calc(100% - 50px);
+        }
+        .post {
+            padding: 25px 25px 80px 25px;
+            &__tag {
+                height: 34px;
+                width: 97px;
+                position: relative;
+                left: 25px;
+                bottom: 25px;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 35px;
+            }
+            &__title {
+                &--name {
+                    font-size: 23px;
+                    line-height: 32px;
+                }
+            }
+            &__date {
+                font-size: 15px;
+                line-height: 50px;
+            }
+            &__text {
+                p {
+                    font-size: 16px;
+                    line-height: 28px;
+                }
+            }
+            &__quote {
+                padding-left: 20px;
+                span {
+                    font-size: 17px;
+                    line-height: 26px;
+                }
+            }
+        }
+    }
+}
